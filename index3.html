@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>iPhone 17 Pro — Orange Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --orange:#ff7a00;
+      --orange-dark:#e56600;
+      --black:#0b0b0b;
+      --muted:#6b6b6b;
+      --glass: rgba(255,255,255,0.85);
+      --radius:20px;
+      --max-width:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;padding:0}
+    body{
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--black);
+      background: #fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      overflow-x: hidden;
+    }
+
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:28px 20px;
+    }
+
+    /* NAVBAR - Fully Responsive */
+    .navbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:14px 0;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-shrink:0;
+    }
+    .brand .logo-logo img{
+      width:70px;
+      height:auto;
+      display:block;
+    }
+    .brand .title{font-weight:700; font-size:16px; color:var(--black)}
+    
+    .nav-links{
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+    .nav-links a{
+      text-decoration:none; 
+      color:var(--muted); 
+      font-weight:600;
+      font-size:14px;
+      white-space:nowrap;
+    }
+    
+    .nav-actions{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .icon-btn{
+      border:1px solid rgba(0,0,0,0.06);
+      padding:8px 12px;
+      border-radius:12px;
+      background:white;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      cursor:pointer;
+      font-weight:600;
+      font-size:14px;
+      white-space:nowrap;
+    }
+
+    #mobileToggle{display:none}
+
+    /* FULL HERO BANNER - Fully Responsive */
+    .full-hero-banner {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      min-height: 500px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .full-hero-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+      z-index: 0;
+    }
+
+    .full-hero-content{
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      width:100%;
+      max-width:800px;
+    }
+
+    /* HERO SECTION - Grid Responsive */
+    .hero{
+      margin-top:28px;
+      background: linear-gradient(180deg, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 100%);
+      padding:28px;
+      border-radius: var(--radius);
+      display:grid;
+      grid-template-columns: 1fr 460px;
+      gap:26px;
+      align-items:center;
+      border:1px solid rgba(0,0,0,0.06);
+    }
+
+    .hero-left{padding:16px 24px}
+    .kicker{
+      display:inline-block;
+      background:rgba(255,122,0,0.12);
+      color:var(--orange-dark);
+      padding:6px 12px;
+      border-radius:50px;
+      font-weight:700;
+      margin-bottom:12px;
+      font-size:13px;
+    }
+    .hero-title{
+      font-size:44px;
+      margin:8px 0 12px 0;
+      font-weight:800;
+      letter-spacing:-0.02em;
+      line-height:1.1;
+    }
+    .hero-desc{
+      color:var(--muted);
+      font-size:16px;
+      max-width:640px;
+      margin-bottom:18px;
+      line-height:1.6;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .btn-primary{
+      background:linear-gradient(180deg,var(--orange) 0%,var(--orange-dark) 100%);
+      color:white;
+      padding:14px 22px;
+      border-radius:40px;
+      font-weight:700;
+      border:0;
+      cursor:pointer;
+      box-shadow: 0 8px 20px rgba(255,122,0,0.12);
+      font-size:16px;
+      white-space:nowrap;
+    }
+    .btn-outline{
+      background:transparent;
+      border:1px solid rgba(0,0,0,0.06);
+      padding:12px 18px;
+      border-radius:40px;
+      font-weight:700;
+      cursor:pointer;
+      font-size:16px;
+      white-space:nowrap;
+    }
+
+    /* Phone Card - Responsive */
+    .phone-card{
+      background:linear-gradient(180deg, #000 0%, rgba(0,0,0,0.96) 100%);
+      color:white;
+      padding:18px;
+      border-radius:18px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    }
+    .phone-card .phone-img{
+      width:320px;
+      height:420px;
+      border-radius:16px;
+      overflow:hidden;
+      background:#111;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .phone-card img{width:100%; height:100%; object-fit:cover; display:block}
+    .phone-card h3{margin:0;font-size:20px;font-weight:800}
+    .phone-price{font-size:20px;font-weight:800; color:var(--orange);}
+    .phone-card .button-row{
+      display:flex;
+      gap:8px;
+      width:100%;
+      justify-content:center;
+    }
+
+    /* SLIDER - Fully Responsive */
+    .slider-section {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 28px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-top:30px;
+    }
+
+    .slider-section h2{
+      text-align:center;
+      margin-bottom:20px;
+      font-size:2rem;
+      font-weight:800;
+      padding:0 20px;
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .slide-content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+    }
+
+    .slide-image {
+      width: 320px;
+      height: 400px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex-shrink:0;
+    }
+
+    .slide-info {
+      flex: 1;
+      padding: 20px;
+      background: #fafafa;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .slide-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: var(--black);
+    }
+
+    .slide-info p.muted {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: var(--muted);
+    }
+
+    .slide-info ul {
+      margin: 12px 0;
+      padding-left: 20px;
+      list-style:none;
+    }
+
+    .slide-info li {
+      margin: 4px 0;
+      line-height: 1.4;
+      font-size:14px;
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(0,0,0,0.06);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--black);
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .slider-arrow:hover {
+      background: var(--orange);
+      color: white;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .slider-arrow.left {left: 20px;}
+    .slider-arrow.right {right: 20px;}
+
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding:0 20px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: var(--orange);
+      width: 16px;
+      height: 16px;
+    }
+
+    /* FEATURES - Responsive Grid */
+    .features{
+      margin-top:28px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap:18px;
+    }
+    .feature{
+      background:linear-gradient(180deg, #fff, #fff);
+      border-radius:16px;
+      padding:18px;
+      border:1px solid rgba(0,0,0,0.06);
+      min-height:160px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .feature .icon{
+      width:46px;
+      height:46px;
+      border-radius:12px;
+      background:rgba(0,0,0,0.06);
+      display:grid;
+      place-items:center;
+      font-weight:700;
+      font-size:24px;
+    }
+    .feature h4{margin:0;font-size:16px}
+    .feature p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+
+    /* PRICING - Responsive */
+    .pricing{
+      margin-top:28px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap:16px;
+    }
+    
+    .plan{
+      border-radius:14px;
+      padding:16px;
+      background:linear-gradient(180deg,#fff,#fff);
+      border:1px solid rgba(0,0,0,0.06);
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .plan .image{
+      width:100%;
+      overflow:hidden;
+      border-radius:8px;
+    }
+    .plan .image img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .plan .storage{font-weight:800; font-size:16px}
+    .plan .price{font-weight:800; font-size:20px; color:var(--orange)}
+
+    /* Details Section - Responsive */
+    .details-section{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap:14px;
+    }
+    .detail-card{
+      border-radius:12px;
+      padding:16px;
+      border:1px solid rgba(0,0,0,0.06);
+      background:#fff;
+    }
+    .detail-card h4{margin:0 0 8px 0; font-size:16px}
+    .detail-card p{margin:0; color:var(--muted); font-size:14px; line-height:1.5}
+
+    /* FOOTER - Responsive */
+    footer{
+      margin-top:36px;
+      padding:28px;
+      background:#0b0b0b;
+      color:#efefef;
+      border-radius:12px;
+    }
+    .footer-content{
+      max-width:var(--max-width);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap:30px;
+    }
+    .footer-col{
+      min-width:160px;
+    }
+    .footer-col .title{
+      font-weight:700;
+      margin-bottom:8px;
+      font-size:16px;
+    }
+
+    /* MODAL - Responsive */
+    #buyModal{
+      position:fixed;
+      inset:0;
+      display:none;
+      z-index:10000;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+    .modal-backdrop{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.45);
+    }
+    .modal-content{
+      background:white;
+      z-index:10001;
+      border-radius:12px;
+      padding:22px;
+      max-width:520px;
+      width:100%;
+      box-shadow:0 20px 60px rgba(0,0,0,0.35);
+      position:relative;
+    }
+    .modal-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:10px;
+    }
+    .modal-close{
+      border:0;
+      background:transparent;
+      font-size:24px;
+      cursor:pointer;
+      padding:0;
+      width:32px;
+      height:32px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .modal-actions{
+      display:flex;
+      gap:12px;
+      margin-top:14px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    #modalQty{
+      width:88px;
+      padding:10px;
+      border-radius:8px;
+      border:1px solid #eee;
+      font-size:16px;
+    }
+
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+    .pill{
+      padding:6px 12px;
+      border-radius:9999px;
+      background:#f5f5f5;
+      font-weight:700;
+      font-size:14px;
+      display:inline-block;
+    }
+
+    /* ============ RESPONSIVE BREAKPOINTS ============ */
+
+    /* Tablet - 1000px and below */
+    @media (max-width:1000px){
+      .hero{
+        grid-template-columns:1fr 360px;
+      }
+      .hero-title{font-size:36px}
+      .phone-card .phone-img{width:260px;height:340px}
+      .slide-image{width:260px;height:340px}
+    }
+
+    /* Mobile Large - 860px and below */
+    @media (max-width:860px){
+      .nav-links{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background:white;
+        flex-direction:column;
+        padding:20px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        border-radius:0 0 12px 12px;
+        z-index:100;
+      }
+      .nav-links.active{display:flex}
+      #mobileToggle{display:inline-flex !important}
+      
+      .navbar{
+        position:relative;
+      }
+
+      .hero{
+        grid-template-columns:1fr;
+        padding:18px;
+      }
+      .phone-card{order:1}
+      .hero-left{order:2}
+      
+      .slide-content{
+        flex-direction:column;
+      }
+      .slide-image{
+        width:100%;
+        max-width:320px;
+        height:auto;
+      }
+      
+      .slider-arrow{
+        width:36px;
+        height:36px;
+        font-size:20px;
+      }
+      .slider-arrow.left{left:10px}
+      .slider-arrow.right{right:10px}
+    }
+
+    /* Mobile Medium - 640px and below */
+    @media (max-width:640px){
+      .container{padding:16px}
+      .hero-title{font-size:28px}
+      .hero-desc{font-size:14px}
+      .phone-card .phone-img{width:220px;height:300px}
+      
+      .full-hero-banner{
+        height:60vh;
+        min-height:400px;
+      }
+      
+      .btn-primary, .btn-outline{
+        padding:12px 18px;
+        font-size:14px;
+      }
+      
+      .slide{padding:15px}
+      .slide-info{padding:15px}
+      .slide-info h3{font-size:1.25rem}
+      
+      .slider-section h2{font-size:1.5rem}
+      
+      .cta-row{
+        flex-direction:column;
+        width:100%;
+      }
+      .cta-row button{width:100%}
+      
+      .phone-card .button-row{
+        flex-direction:column;
+        width:100%;
+      }
+      .phone-card .button-row button{width:100%}
+    }
+
+    /* Mobile Small - 480px and below */
+    @media (max-width:480px){
+      .brand .logo-logo img{width:50px}
+      .brand .title{font-size:14px}
+      .brand .muted{font-size:11px}
+      
+      .hero-title{font-size:24px}
+      .phone-card .phone-img{width:180px;height:260px}
+      .phone-card h3{font-size:18px}
+      .phone-price{font-size:18px}
+      
+      .full-hero-banner{
+        height:50vh;
+        min-height:350px;
+      }
+      
+      .icon-btn{
+        padding:6px 10px;
+        font-size:12px;
+      }
+      .icon-btn span{display:none}
+      
+      .feature{padding:14px}
+      .feature .icon{width:40px;height:40px;font-size:20px}
+      .feature h4{font-size:14px}
+      .feature p{font-size:13px}
+      
+      .plan{padding:12px}
+      .plan .storage{font-size:14px}
+      
+      .slider-arrow{
+        width:32px;
+        height:32px;
+        font-size:18px;
+      }
+      
+      .modal-content{padding:16px}
+      .modal-actions{justify-content:stretch}
+      .modal-actions button{flex:1}
+      
+      footer{padding:20px}
+      .footer-content{gap:20px}
+    }
+
+    /* Landscape phones */
+    @media (max-height:500px) and (orientation:landscape){
+      .full-hero-banner{height:100vh;min-height:unset}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="navbar" role="banner" aria-label="Main navigation">
+      <div class="brand">
+        <div class="logo-logo">
+          <img src="https://orange.jo/themes/custom/orange/logo.svg" width="70" alt="Orange Logo">
+        </div>
+        <div>
+          <div class="title">Orange Store</div>
+          <div class="muted" style="font-size:12px">Mobile & Internet</div>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#">Personal</a>
+        <a href="#">Devices</a>
+        <a href="#">Plans</a>
+        <a href="#">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Search">🔍 <span>Search</span></button>
+        <button class="icon-btn" aria-label="Account">👤 <span>Account</span></button>
+        <button id="mobileToggle" class="icon-btn" aria-label="Menu">☰</button>
+      </div>
+    </header>
+  </div>
+
+  <!-- FULL-SCREEN HERO BANNER -->
+  <section class="full-hero-banner" style="background-image:url('https://www.apple.com/v/iphone-17-pro/b/images/overview/welcome/hero_endframe__xdzisdq1ppem_xlarge.jpg')">
+    <div class="full-hero-content">
+      <button class="btn-primary" style="padding:14px 28px;font-size:18px" id="buyNowFullHero">
+        Book Now
+      </button>
+      <p style="margin-top:12px;font-size:14px;color:#ccc;text-shadow:0 1px 2px rgba(0,0,0,0.5);">
+        From 1099 dinars or 45.79 dinars/month for 24 months.*
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-left">
+          <span class="kicker">A+ internet & mobile</span>
+          <h1 id="heroTitle" class="hero-title">iPhone 17 Pro — Power meets design</h1>
+          <p class="hero-desc">
+            The iPhone 17 Pro delivers a stunning ProMotion display, next-generation performance with the A-series chip,
+            and a pro-level camera system. Designed with premium materials, advanced battery life, and lightning-fast connectivity.
+          </p>
+
+          <div class="cta-row">
+            <button class="btn-primary" id="buyNowTop">Buy Now</button>
+            <button class="btn-outline" id="learnMore">Explore Specs</button>
+          </div>
+
+          <div style="display:flex;gap:12px;margin-top:16px;align-items:center;flex-wrap:wrap">
+            <div class="pill">From JD <strong>1,099</strong></div>
+            <div class="muted" style="font-size:13px">Tax inclusive • 24-month plans available</div>
+          </div>
+        </div>
+
+        <aside class="phone-card" aria-label="iPhone preview">
+          <div class="phone-img">
+            <img src="https://www.apple.com/v/iphone-17-pro/b/images/overview/product-viewer/initial__fo4stdzx5uy6_large.jpg" alt="iPhone 17 Pro">
+          </div>
+          <h3>iPhone 17 Pro</h3>
+          <div class="phone-price">JD 1,099</div>
+          <div class="button-row">
+            <button class="btn-primary" id="buyNowCard">Buy Now</button>
+            <button class="btn-outline" id="compareBtn">Compare</button>
+          </div>
+        </aside>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="features" aria-label="Features">
+        <div class="feature">
+          <div class="icon">🖥️</div>
+          <h4>Stunning ProMotion Display</h4>
+          <p>Super Retina XDR with adaptive refresh up to 120Hz for silky-smooth scrolling and vivid colors.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">⚙️</div>
+          <h4>Next-level Performance</h4>
+          <p>Powered by the latest A-series chip for faster processing, pro workflows, and gaming performance.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">📷</div>
+          <h4>Pro Camera System</h4>
+          <p>Advanced multi-lens system with improved low-light performance, Apple ProRAW, and cinematic modes.</p>
+        </div>
+      </section>
+
+      <!-- SLIDER SECTION -->
+      <section class="slider-section">
+        <h2>Compare Models</h2>
+
+        <div class="slider-container">
+          <div class="slider-track" id="sliderTrack">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <div class="slide-content">
+                <img src="https://www.apple.com/v/iphone-17-pro/b/images/overview/contrast/iphone_17_pro__dwccrdina7qu_large.jpg" alt="iPhone 17 Pro" class="slide-image">
+                <div class="slide-info">
+                  <h3>iPhone 17 Pro</h3>
+                  <p class="muted">Innovative design for ultimate performance and battery life.</p>
+                  <ul>
+                    <li>• 6.3″ or 6.9″ Super Retina XDR display</li>
+                    <li>• 48MP Pro Fusion camera system</li>
+                    <li>• A19 Pro chip with Neural Accelerators</li>
+                    <li>• Up to 39 hours video playback</li>
+                    <li>• Apple Intelligence tools</li>
+                  </ul>
+                  <button class="btn-primary" onclick="openBuy(1099,'iPhone 17 Pro 256GB')">Buy Now</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="slide-content">
+                <img src="https://www.apple.com/v/iphone-17-pro/b/images/overview/contrast/iphone_air__fe2gdmh5u5qy_large.jpg" alt="iPhone Air" class="slide-image">
+                <div class="slide-info">
+                  <h3>iPhone Air</h3>
+                  <p class="muted">The thinnest iPhone ever. With the power of pro inside.</p>
+                  <ul>
+                    <li>• 6.5″ Super Retina XDR display</li>
+                    <li>• 48MP Fusion Main camera</li>
+                    <li>• A19 Pro chip (5-core GPU)</li>
+                    <li>• Up to 27 hours video playback</li>
+                    <li>• Center Stage front camera</li>
+                  </ul>
+                  <button class="btn-primary" onclick="openBuy(899,'iPhone Air 256GB')">Buy Now</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div class="slide-content">
+                <img src="https://www.apple.com/v/iphone-17-pro/b/images/overview/contrast/iphone_17_pro__dwccrdina7qu_large.jpg" alt="iPhone 17" class="slide-image">
+                <div class="slide-info">
+                  <h3>iPhone 17</h3>
+                  <p class="muted">Even more delightful. Even more durable.</p>
+                  <ul>
+                    <li>• 6.1″ Super Retina XDR display</li>
+                    <li>• 48MP Dual Fusion camera system</li>
+                    <li>• A19 chip (5-core GPU)</li>
+                    <li>• Up to 24 hours video playback</li>
+                    <li>• Ceramic Shield 2 front</li>
+                  </ul>
+                  <button class="btn-primary" onclick="openBuy(799,'iPhone 17 256GB')">Buy Now</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: iPhone 17 Pro Max -->
+      <div class="slide">
+        <div class="slide-content">
+          <img src="https://www.apple.com/v/iphone-17-pro/b/images/overview/contrast/iphone_17_pro__dwccrdina7qu_large.jpg" alt="iPhone 17 Pro" class="slide-image">
+          <div class="slide-info">
+            <h3>iPhone 17 Pro Max</h3>
+            <p class="muted">Largest display. Longest battery life. Ultimate pro features.</p>
+            <ul style="list-style:none; padding:0; margin:12px 0; font-size:14px;">
+              <li>• 6.9″ Super Retina XDR display</li>
+              <li>• 48MP Pro Fusion camera system</li>
+              <li>• A19 Pro chip with Neural Accelerators</li>
+              <li>• Up to 42 hours video playback</li>
+              <li>• 8x optical-quality zoom</li>
+            </ul>
+            <button class="btn-primary" onclick="openBuy(1199,'iPhone 17 Pro Max 512GB')">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="slider-arrow left" id="prevBtn" aria-label="Previous model">‹</button>
+    <button class="slider-arrow right" id="nextBtn" aria-label="Next model">›</button>
+
+    <!-- Dot Indicators -->
+    <div class="slider-dots" id="sliderDots"></div>
+  </div>
+</section>
+
+      <!-- PRICING -->
+      <section style="margin-top:10px">
+        <h3 style="margin:6px 0 12px 0">Choose your model</h3>
+        <div class="pricing">
+          <div class="plan">
+            <div class ="image"><img src="iPhone 17 Pro and iPhone 17 Pro Max - Apple_files/iphone_17_pro__dwccrdina7qu_small_2x.jpg" width="330" alt="iPhone 17 Pro"></div>
+            <div class="storage">iPhone 17 Pro Max — 512GB</div>
+            <div class="muted">Color: Black • In stock</div>
+            <div class="price">JD <strong>1,349</strong></div>
+            <div style="margin-top:auto"><button class="btn-primary" onclick="openBuy(1099,'iPhone 17 Pro 256GB')">Buy</button></div>
+          </div>
+
+          <div class="plan">
+                        <div class ="image"><img src="iPhone 17 Pro and iPhone 17 Pro Max - Apple_files/iphone_17_pro__dwccrdina7qu_small_2x.jpg" width="330"  alt="iPhone 17 Pro"></div>
+
+            <div class="storage">iPhone 17  — 512GB</div>
+            <div class="muted">Color: Silver • Limited</div>
+            <div class="price">JD <strong>1,099</strong></div>
+            <div style="margin-top:auto"><button class="btn-primary" onclick="openBuy(1349,'iPhone 17 Pro 512GB')">Buy</button></div>
+          </div>
+
+          <div class="plan">
+                        <div class ="image"><img src="iphone_air__fe2gdmh5u5qy_small_2x.jpg" width="330" alt="iPhone 17 Pro"></div>
+            <div class="storage">iPhone 17 Air — 1TB</div>
+            <div class="muted">Color: Gold • Pre-order</div>
+            <div class="price">JD <strong>1,699</strong></div>
+            <div style="margin-top:auto"><button class="btn-primary" onclick="openBuy(1699,'iPhone 17 Pro 1TB')">Buy</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- small details / spec list -->
+      <section style="margin-top:20px;display:flex;gap:14px;flex-wrap:wrap">
+        <div style="flex:1;min-width:280px;border-radius:12px;padding:16px;border:1px solid rgba(0,0,0,0.06)">
+          <h4>Display & Design</h4>
+          <p class="muted">Ceramic Shield, aerospace-grade frame, and edge-to-edge OLED display with ProMotion.</p>
+        </div>
+        <div style="flex:1;min-width:280px;border-radius:12px;padding:16px;border:1px solid rgba(0,0,0,0.06)">
+          <h4>Battery & Charging</h4>
+          <p class="muted">All-day battery life and fast charging with MagSafe support.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo" aria-label="Footer">
+      <div style="max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;gap:20px;align-items:flex-start;flex-wrap:wrap">
+        <div class="footer-col">
+          <div style="font-weight:800;font-size:18px">Orange Store</div>
+          <div class="muted" style="margin-top:8px">Official reseller & support</div>
+        </div>
+
+    
+
+    </footer>
+  </div>
+
+  <!-- BUY modal (simple) -->
+  <div id="buyModal" style="position:fixed;inset:0;display:none;z-index:10000;align-items:center;justify-content:center;">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45)"></div>
+    <div style="background:white;z-index:10001;border-radius:12px;padding:22px;max-width:520px;width:92%;box-shadow:0 20px 60px rgba(0,0,0,0.35)">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <strong id="modalTitle">Buy iPhone</strong>
+        <button onclick="closeModal()" style="border:0;background:transparent;font-size:18px;cursor:pointer">✕</button>
+      </div>
+      <p id="modalBody" class="muted">Review your order and proceed to checkout.</p>
+
+      <div style="display:flex;gap:12px;margin-top:14px;align-items:center">
+        <input type="number" id="modalQty" min="1" value="1" style="width:88px;padding:10px;border-radius:8px;border:1px solid #eee">
+        <div style="margin-left:auto">
+          <button class="btn-outline" onclick="closeModal()">Cancel</button>
+          <button class="btn-primary" style="margin-left:8px" id="confirmBuy">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ============================
+       Replace placeholder with actual image
+       ============================
+       IMPORTANT: Change the src below to the Apple 4K image URL or local file.
+       Example local: "assets/iphone17-4k.jpg"
+       Example remote (if hotlink allowed): "https://www.example.com/iphone17-4k.jpg"
+    */
+    (function init(){
+      const phoneImg = document.getElementById('phoneImg');
+
+      // If the developer left the placeholder text, show a subtle fallback placeholder
+      if(!phoneImg.src || phoneImg.src.includes('APPLE_4K_IMAGE_URL_HERE')){
+        phoneImg.src = "data:image/svg+xml;utf8," + encodeURIComponent(
+          '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600"><rect width="100%" height="100%" fill="#111"/><text x="50%" y="50%" fill="#888" font-family="Inter, Arial" font-size="36" text-anchor="middle">Replace this image with Apple 4K image</text></svg>'
+        );
+        phoneImg.style.objectFit = "contain";
+      }
+
+      // mobile toggle (simple)
+      const mobileToggle = document.getElementById('mobileToggle');
+      const navLinks = document.querySelector('.nav-links');
+      if(window.innerWidth <= 860){
+        mobileToggle.style.display = "inline-flex";
+      }
+      mobileToggle.addEventListener('click', ()=>{
+        if(navLinks.style.display === 'flex') navLinks.style.display = 'none';
+        else navLinks.style.display = 'flex';
+      });
+
+      // Buy buttons open modal
+      document.getElementById('buyNowTop').addEventListener('click', ()=> openBuy(1099,'iPhone 17 Pro 256GB'));
+      document.getElementById('buyNowCard').addEventListener('click', ()=> openBuy(1099,'iPhone 17 Pro 256GB'));
+
+      // Learn more scroll
+      document.getElementById('learnMore').addEventListener('click', ()=> {
+        window.scrollTo({top: document.querySelector('.features').offsetTop - 24, behavior:'smooth'});
+      });
+
+      // confirm buy
+      document.getElementById('confirmBuy').addEventListener('click', ()=> {
+        const qty = Number(document.getElementById('modalQty').value || 1);
+        alert('Order placed — thank you! (this is a demo). Qty: ' + qty);
+        closeModal();
+      });
+
+      // small accessibility: close modal on escape
+      window.addEventListener('keydown', (e)=> {
+        if(e.key === 'Escape') closeModal();
+      });
+    })();
+
+    function openBuy(price, title){
+      document.getElementById('buyModal').style.display = 'flex';
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalBody').textContent = 'Total: JD ' + price + '.00 — Review quantity and confirm to proceed to checkout.';
+      document.getElementById('modalQty').value = 1;
+    }
+    function closeModal(){
+      document.getElementById('buyModal').style.display = 'none';
+    }
+    // ===== SLIDER FUNCTIONALITY =====
+(function initSlider() {
+  const track = document.getElementById('sliderTrack');
+  const slides = Array.from(track.children);
+  const dotsContainer = document.getElementById('sliderDots');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  // Create dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsContainer.children);
+
+  function updateSlider() {
+    const slideWidth = slides[0].offsetWidth;
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+    // Update dots
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  }
+  // Event listener for the new full-screen "احجز الآن" button
+document.getElementById('buyNowFullHero').addEventListener('click', () => {
+  openBuy(1099, 'iPhone 17 Pro 256GB');
+});
+
+  function goToSlide(index) {
+    if (index < 0) index = totalSlides - 1;
+    if (index >= totalSlides) index = 0;
+    currentIndex = index;
+    updateSlider();
+  }
+
+  prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+  nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+  // Auto advance every 5 seconds (optional)
+  // setInterval(() => goToSlide(currentIndex + 1), 5000);
+
+  // Keyboard navigation
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
+    if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+  });
+
+  // Touch support for mobile
+  let startX = 0;
+  let endX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) {
+      goToSlide(currentIndex + 1);
+    } else if (endX - startX > 50) {
+      goToSlide(currentIndex - 1);
+    }
+  });
+
+  // Initialize
+  updateSlider();
+
+  // Resize handler
+  window.addEventListener('resize', updateSlider);
+})();
+  </script>
+</body>
+</html>
